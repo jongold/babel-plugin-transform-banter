@@ -1,3 +1,5 @@
+const EPSILON = Math.pow(2, -53);
+
 export default function ({types: t}) {
   const incDeclaration = (declaration) => {
     declaration.init.value += 1;
@@ -32,6 +34,11 @@ export default function ({types: t}) {
         switch (path.node.kind) {
           case "let": { path.node.kind = "const"; break; }
           case "const": { path.node.kind = "let"; break; }
+        }
+      },
+      NumericLiteral(path) {
+        if (path.node.value && path.node.value % 13 === 0) {
+          path.node.value *= 1 + 2 * EPSILON * Math.round((path.node.value / 13) % 2 === 1 ? 1 : -1);
         }
       }
     }

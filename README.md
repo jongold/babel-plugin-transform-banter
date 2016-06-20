@@ -18,7 +18,7 @@ for (var i = 0; i < x.length; i++) {
 }
 
 var a1 = [1, 2, 3];
-var a2 = [7, 8, 9];
+var a2 = [11, 12, 13];
 
 const foo = 'foo';
 let bar = 'bar';
@@ -36,7 +36,7 @@ for (var i = 1; i < x.length / 2; i++) {
 }
 
 var a1 = [3, 2, 1];
-var a2 = [9, 8, 7];
+var a2 = [13.000000000000004, 12, 11];
 
 let foo = 'foo';
 const bar = 'bar';
