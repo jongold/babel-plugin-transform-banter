@@ -27,6 +27,12 @@ export default function ({types: t}) {
         if (t.isArrayExpression(init)) {
           init.elements = init.elements.reverse();
         }
+      },
+      Declaration(path) {
+        switch (path.node.kind) {
+          case "let": { path.node.kind = "const"; break; }
+          case "const": { path.node.kind = "let"; break; }
+        }
       }
     }
   };
