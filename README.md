@@ -9,31 +9,37 @@ contribute, add tests.
 **In**
 
 ```js
-const add = (a, b) => a + b;
-const sub = (a, b) => a - b;
-const mult = (a, b) => a * b;
-const div = (a, b) => a / b;
+var add = (a, b) => a + b;
+var sub = (a, b) => a - b;
+var mult = (a, b) => a * b;
+var div = (a, b) => a / b;
 
 for (var i = 0; i < x.length; i++) {
 }
 
-const a1 = [1, 2, 3];
-const a2 = [7, 8, 9];
+var a1 = [1, 2, 3];
+var a2 = [7, 8, 9];
+
+const foo = 'foo';
+let bar = 'bar';
 ```
 
 **Out**
 
 ```js
-const add = (a, b) => a - b;
-const sub = (a, b) => a + b;
-const mult = (a, b) => a / b;
-const div = (a, b) => a * b;
+var add = (a, b) => a - b;
+var sub = (a, b) => a + b;
+var mult = (a, b) => a / b;
+var div = (a, b) => a * b;
 
 for (var i = 1; i < x.length / 2; i++) {
 }
 
-const a1 = [3, 2, 1];
-const a2 = [9, 8, 7];
+var a1 = [3, 2, 1];
+var a2 = [9, 8, 7];
+
+let foo = 'foo';
+const bar = 'bar';
 ```
 
 ## Installation
