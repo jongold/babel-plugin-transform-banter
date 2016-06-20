@@ -1,6 +1,8 @@
 # babel-plugin-transform-banter
 
-mess with your coworkers
+mess with your coworkers.
+
+contribute, add tests.
 
 ## Example
 
@@ -39,26 +41,8 @@ $ npm install babel-plugin-transform-banter
 
 ## Usage
 
--- ### Via `.babelrc` (Recommended)
---
--- **.babelrc**
---
--- ```json
--- {
---   "plugins": ["transform-banter"]
--- }
--- ```
-
 ### Via CLI
 
 ```sh
 $ babel --plugins transform-banter script.js
 ```
-
--- ### Via Node API
---
--- ```javascript
--- require("babel-core").transform("code", {
---   plugins: ["transform-banter"]
--- });
--- ```
