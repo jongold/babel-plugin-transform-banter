@@ -21,6 +21,12 @@ export default function ({types: t}) {
         const { init, test, update } = path.node;
         init.declarations = init.declarations.map(incDeclaration);
         test.right.property.name = test.right.property.name + " / 2";
+      },
+      VariableDeclarator(path) {
+        const { init } = path.node;
+        if (t.isArrayExpression(init)) {
+          init.elements = init.elements.reverse();
+        }
       }
     }
   };
